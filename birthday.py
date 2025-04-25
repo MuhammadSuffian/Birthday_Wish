@@ -30,6 +30,34 @@ st.markdown("""
 #MainMenu {visibility: hidden;}
 .stDeployButton {display:none;}
 header {visibility: hidden;}
+
+/* Force Light Mode */
+body [data-testid="stAppViewContainer"], 
+body [data-testid="stSidebar"],
+body [data-testid="stHeader"],
+body [data-testid="stToolbar"] {
+    background-color: #FFFFFF;
+    color: #31333F;
+}
+
+/* Force light mode for all text elements */
+body [data-testid="stMarkdownContainer"] {
+    color: #31333F;
+}
+
+/* Override dark mode toggle functionality */
+.stApp {
+    background-color: #FFFFFF !important;
+}
+
+[data-theme="dark"] {
+    --text-color: #31333F !important;
+    --background-color: #FFFFFF !important;
+    --secondary-background-color: #F0F2F6 !important;
+    --color-primary: #FF4B4B !important;
+    --color-selection-light: rgba(255, 75, 75, 0.5) !important;
+    --color-selection: rgba(255, 75, 75, 0.7) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
